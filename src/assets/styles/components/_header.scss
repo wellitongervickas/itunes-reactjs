@@ -2,4 +2,11 @@ header {
   background-color: var(--primary-color);
   color: #fff;
   padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  align-items: center;  
+
+  .search {
+    
+  }
 }

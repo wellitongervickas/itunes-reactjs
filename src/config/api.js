@@ -1,3 +1,7 @@
+/**
+ * See all documentation of itunes api
+ * Link: https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/ 
+*/
 
 const api = {
   local: 'https://itunes.apple.com',

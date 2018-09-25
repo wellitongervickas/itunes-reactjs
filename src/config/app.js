@@ -1,3 +1,3 @@
 export default {
-  appName: 'Itunes Serasa Consumidor',
+  appName: 'iTunes',
 }

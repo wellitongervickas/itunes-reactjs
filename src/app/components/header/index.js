@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import { Logo } from '../../../components';
+import Search from './search';
 
 export default class Header extends Component {
   render() {
     return (
       <section>
-        <header>#Header</header>
+        <header>
+          <Logo />
+          <Search />
+        </header>
       </section>
     )
   }

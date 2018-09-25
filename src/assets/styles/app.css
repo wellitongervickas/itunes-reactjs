@@ -1,3 +1,12 @@
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.pointer {
+  cursor: pointer; }
+
 body {
   font-family: 'Lato', sans-serif;
   font-size: 14px; }
@@ -9,9 +18,6 @@ html, body, .app, #root {
 :root {
   --primary-color: #333333; }
 
-main {
-  padding: 20px; }
-
 footer {
   text-align: center;
   color: #666666;
@@ -20,9 +26,11 @@ footer {
 header {
   background-color: var(--primary-color);
   color: #fff;
-  padding: 20px; }
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  align-items: center; }
 
 .app {
   display: grid;
-  grid-template-rows: 40px 1fr 40px;
-  grid-gap: 20px; }
+  grid-template-rows: auto 1fr 40px; }

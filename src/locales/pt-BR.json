@@ -1,3 +1,5 @@
 {
-  "hello":"Olá"
+  "texts": {
+    "welcome_to": "Welcome to %s"
+  }
 }
