@@ -1,0 +1,28 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px; }
+
+html, body, .app, #root {
+  height: 100%;
+  background-color: #fff; }
+
+:root {
+  --primary-color: #333333; }
+
+main {
+  padding: 20px; }
+
+footer {
+  text-align: center;
+  color: #666666;
+  font-size: 12px; }
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px; }
+
+.app {
+  display: grid;
+  grid-template-rows: 40px 1fr 40px;
+  grid-gap: 20px; }
