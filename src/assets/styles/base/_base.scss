@@ -1,13 +1,15 @@
 @import './reuse';
+@import './font';
+@import './reset';
+@import './spaces';
 
 body {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
 }
 
-html, body, .app, #root {
+html, body, .app, #root, main {
   height: 100%;
-  background-color: #fff;
 }
 
 :root {

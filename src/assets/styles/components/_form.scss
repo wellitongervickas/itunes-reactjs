@@ -1,0 +1,13 @@
+.input-error {
+  border: 1px solid red;
+
+  &-message {
+    width: 100%;
+    display: block;
+  }
+}
+
+.input-error-message {
+  margin-top: 5px;
+  color: red;
+}

@@ -1,0 +1,37 @@
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-xs {
+  font-size: 11px;
+  color: #999;
+}
+
+.text-sm {
+  font-size: 14px;
+  color: #999;
+}
+
+.label, label {
+  margin-bottom: 10px;
+  font-weight: 200;
+  color: #888;
+  width: 100%;
+  display: block;
+}
+
+.required {
+  color: red;
+}

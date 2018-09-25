@@ -1,0 +1,17 @@
+a, button, input, select, textarea, div {
+  outline: none;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0px;
+  padding: 0px;
+}
+
+input, textarea, button {
+  appearance: none !important;
+}
+
+input[type='number'] {
+  appearance: textfield;
+}
