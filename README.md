@@ -1,4 +1,4 @@
-# Itunes Serasa Consumidor
+# iTunes Serasa Consumidor
 > This project has been created to validate a front-end challenge.
 
 ## Project Requirements
@@ -6,6 +6,7 @@
 - Allowed to create with React Or Angular
 - Must got a albums list from artist
 - Must got a songs list by artist
+- Get all data from iTunes API
 
 ## Instructions to developer
 - Clone project directory
