@@ -71,11 +71,6 @@ class InputDefault extends Component {
       id: this.props.inputFor || '',
       className: 'input-default-field',
       value: this.props.inputValue,
-      onFocus: () => {
-        if (this.props.inputTypeColor === true) {
-          this.setState({ showColor: true })
-        }
-      },
       onChange: e => {
         this.setState({ validationMessage: e.target.validationMessage })
         this.validateField( e.target )
