@@ -1,0 +1,34 @@
+.results {
+  padding: 20px;
+
+  &-list {
+    .item {
+      display: grid;
+      grid-template-columns: 100px 1fr 40px;
+      grid-gap: 20px;
+
+      .thumb {
+        min-width: 100px;
+        min-height: 100px;
+        
+        img {
+          border-radius: 15px;
+          border: 1px solid #ddd;
+        }
+      }
+
+      .name {
+        color: #444;
+        font-size: 16px;
+      }
+
+      .artist-name a {
+        color: #666;
+      }
+
+      .time {
+        color: #666;
+      }
+    }
+  }
+}

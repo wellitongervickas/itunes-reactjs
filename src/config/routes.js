@@ -1,9 +1,11 @@
 import Introduction from '../app/views/introduction';
 import Results from '../app/views/results';
+import Artist from '../app/views/artist';
 import NotFound from '../app/views/not-found';
 
 const routesList = {
   introduction: '/',
+  artist: '/artist',
   results: '/results',
   notFound: '/not-found',
 };
@@ -18,6 +20,11 @@ const routesApp = {
     path: routesList.results,
     exact: true,
     main: Results,
+  },
+  artist: {
+    path: routesList.artist + '/:id',
+    exact: true,
+    main: Artist
   },
   notFound: {
     path: routesList.notFound,

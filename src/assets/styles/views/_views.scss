@@ -1,5 +1,6 @@
 .app {
   @import './introduction';
+  @import './results';
 
   display: grid;
   grid-template-rows: auto 1fr 40px;

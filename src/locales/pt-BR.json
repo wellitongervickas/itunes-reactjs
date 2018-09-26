@@ -2,10 +2,16 @@
   "texts": {
     "welcome_to": "Welcome to %s",
     "search": "Search",
-    "send": "Send"
+    "send": "Send",
+    "back": "Back",
+    "back_to_home": "Back to home",
+    "results": "Results"
   },
   "placeholders": {
     "search_term": "Search term",
     "search_artist": "Search artist"
+  },
+  "warnings": {
+    "empty_list": "Empty list"
   }
 }

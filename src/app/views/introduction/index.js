@@ -11,7 +11,11 @@ import { Form, Input } from '../../../components';
 class Introduction extends Component {
 
   state = {
-    searchField: '',
+    searchField: 'Lucky you',
+  }
+
+  componentWillMount() {
+    this.props._resetSearchState();
   }
 
   submitForm() {
