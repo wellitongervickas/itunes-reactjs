@@ -4,10 +4,7 @@ import middleware from '../middleware';
 const { url, search } = config.api;
 
 /**
- * @function getAddressByZipcode
- *
- * This function will return a full
- * address based on zipcode
+ * @function searchTerm
  *
  * @public
  *
