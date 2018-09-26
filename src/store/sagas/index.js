@@ -1,2 +1,9 @@
+import { all, takeLatest } from 'redux-saga/effects';
 
-export default function* root() {};
+import { asyncSearchTerm } from './search';
+
+export default function* root() {
+  yield all([
+    takeLatest('ASYNC_SEARCH_TERM', asyncSearchTerm),
+  ])
+};

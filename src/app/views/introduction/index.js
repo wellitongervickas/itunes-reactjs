@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
-import { parseString } from '../../../model/helpers/translation';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as searchActions from '../../../store/actions/search';
+
 import config from '../../../config';
+import { parseString } from '../../../model/helpers/translation';
 import { Form, Input } from '../../../components';
 
-export default class Introduction extends Component {
+class Introduction extends Component {
 
   state = {
     searchField: '',
   }
 
   submitForm() {
-    console.log('submit')
+    this.props.searchTerm(this.state.searchField);
   }
   
   render() {
@@ -28,6 +33,7 @@ export default class Introduction extends Component {
             onSubmit={ () => this.submitForm() }>
             <div className="field-control">
               <Input
+                inputFocus={ true }
                 inputRequired={ true }
                 inputFor="search"
                 inputPlaceholder={ placeholders.search_term }
@@ -46,4 +52,8 @@ export default class Introduction extends Component {
       </div>
     )
   }
-}
+};
+
+const mapDispatchToProps = dispatch => bindActionCreators(searchActions, dispatch);
+
+export default connect(null, mapDispatchToProps)(Introduction);

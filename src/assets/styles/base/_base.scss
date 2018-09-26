@@ -1,7 +1,7 @@
-@import './reuse';
-@import './font';
 @import './reset';
+@import './reuse';
 @import './spaces';
+@import './font';
 
 body {
   font-family: 'Lato', sans-serif;
@@ -13,5 +13,5 @@ html, body, .app, #root, main {
 }
 
 :root {
-  --primary-color: #333333;
+  --color-primary: #333333;
 }

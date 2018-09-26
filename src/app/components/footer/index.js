@@ -9,7 +9,7 @@ export default class Footer extends Component {
     
     return (
       <section>
-        <footer>
+        <footer className="flex flex-around-center">
             { config.app.appName } &copy; { year }
         </footer>
       </section>

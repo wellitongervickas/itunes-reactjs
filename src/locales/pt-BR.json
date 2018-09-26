@@ -5,6 +5,6 @@
     "send": "Send"
   },
   "placeholders": {
-    "search_term": "Please, input a term to search"
+    "search_term": "Term to search"
   }
 }
