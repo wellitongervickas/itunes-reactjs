@@ -10,6 +10,16 @@
       .thumb {
         min-width: 100px;
         min-height: 100px;
+        position: relative;
+
+        .player {
+          border-radius: 15px;
+          position: absolute;
+          background-color: rgba(0,0,0,0.3);
+          width: 102px;
+          height: 102px;
+          color: #ff8a2b;
+        }
         
         img {
           border-radius: 15px;

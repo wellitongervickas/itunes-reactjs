@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import config from '../../../config';
-import Result from './components/result';
+import { SongThumb } from '../../../components';
 
 class Results extends Component {
   render() {
@@ -17,7 +17,7 @@ class Results extends Component {
         </h2>
         <div className="results-list">
           { searchResults && searchResults.length ?
-            searchResults.map((item, index) => <Result key={ index } result={ item } /> ) : warnings.empty_list
+            searchResults.map((item, index) => <SongThumb key={ index } result={ item } /> ) : warnings.empty_list
           }
         </div>
         <div className="results-actions btn-control text-center mg-top-20 mg-bottom-20">
