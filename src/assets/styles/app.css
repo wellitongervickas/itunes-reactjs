@@ -21,6 +21,9 @@ input[type='number'] {
 .pointer {
   cursor: pointer; }
 
+.hide {
+  display: none; }
+
 .mg-bottom-10 {
   margin-bottom: 10px; }
 
@@ -227,7 +230,15 @@ html, body, .app, #root, main {
       grid-gap: 20px; }
       .app .results-list .item .thumb {
         min-width: 100px;
-        min-height: 100px; }
+        min-height: 100px;
+        position: relative; }
+        .app .results-list .item .thumb .player {
+          border-radius: 15px;
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.3);
+          width: 102px;
+          height: 102px;
+          color: #ff8a2b; }
         .app .results-list .item .thumb img {
           border-radius: 15px;
           border: 1px solid #ddd; }
