@@ -5,6 +5,9 @@ const { url, search } = config.api;
 
 /**
  * @function searchTerm
+ * 
+ * Fixed to return only
+ * songs results
  *
  * @public
  *
@@ -12,9 +15,9 @@ const { url, search } = config.api;
 
 export function searchTerm(term) {
 
-  const route = `${url}${search.term}${encodeURIComponent(term)}`;
+  const route = `${url}${search.term}${encodeURIComponent(term)}&entity=song`;
   
-  return middleware.requestAxios(false).get(route)
+  return middleware.requestAxios().get(route)
   .then(res => res).catch(e => e);
 };
 

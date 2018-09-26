@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from './components/header';
 import Content from './components/content';
 import Footer from './components/footer';
+import Loading from '../components/loading';
 
 export default class App extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class App extends Component {
         <Header/>
         <Content />
         <Footer />
+        <Loading />
       </div>
     )
   }

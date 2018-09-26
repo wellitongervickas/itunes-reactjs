@@ -26,6 +26,6 @@ export default {
   url: define( process.env.REACT_APP_STAGE ),
   search: {
     base: '/search',
-    term: '/search?term='
+    term: '/search?term=',
   }
 };

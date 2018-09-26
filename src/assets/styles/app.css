@@ -108,38 +108,38 @@ html, body, .app, #root, main {
 :root {
   --color-primary: #333333; }
 
-.flex {
+.flex, .loading {
   display: flex; }
-  .flex.flex-center {
+  .flex.flex-center, .loading {
     justify-content: center;
     align-items: center; }
-  .flex.flex-center-start {
+  .flex.flex-center-start, .flex-center-start.loading {
     justify-content: center;
     align-items: start; }
-  .flex.flex-end-center {
+  .flex.flex-end-center, .flex-end-center.loading {
     justify-content: flex-end;
     align-items: center; }
-  .flex.flex-around-center {
+  .flex.flex-around-center, .flex-around-center.loading {
     justify-content: space-around;
     align-items: center; }
-  .flex.flex-between-start {
+  .flex.flex-between-start, .flex-between-start.loading {
     justify-content: space-between;
     align-items: flex-start; }
-  .flex.flex-between-center {
+  .flex.flex-between-center, .flex-between-center.loading {
     justify-content: space-between;
     align-items: center; }
-  .flex.flex-start-column {
+  .flex.flex-start-column, .flex-start-column.loading {
     justify-content: start;
     flex-direction: column; }
-  .flex.flex-evenly-center-column {
+  .flex.flex-evenly-center-column, .flex-evenly-center-column.loading {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column; }
-  .flex.flex-center-column {
+  .flex.flex-center-column, .flex-center-column.loading {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
-  .flex.flex-column-center {
+  .flex.flex-column-center, .flex-column-center.loading {
     flex-direction: column;
     justify-content: center; }
 
@@ -263,3 +263,12 @@ header {
   .btn.btn-primary {
     color: #fff;
     background-color: var(--color-primary); }
+
+.loading {
+  top: 0px;
+  bottom: 0px;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10; }

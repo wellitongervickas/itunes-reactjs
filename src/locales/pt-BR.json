@@ -5,6 +5,7 @@
     "send": "Send"
   },
   "placeholders": {
-    "search_term": "Term to search"
+    "search_term": "Search term",
+    "search_artist": "Search artist"
   }
 }

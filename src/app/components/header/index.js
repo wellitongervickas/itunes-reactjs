@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Logo } from '../../../components';
-import Search from './search';
 
 export default class Header extends Component {
   render() {
@@ -8,7 +7,6 @@ export default class Header extends Component {
       <section>
         <header>
           <Logo />
-          <Search />
         </header>
       </section>
     )
