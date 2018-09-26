@@ -16,7 +16,7 @@ class SongThumb extends Component {
     const { result } = this.props;
     
     return (
-      <div className="item mg-bottom-20" data-id={ result.artistId }>
+      <div className="song-thumb mg-bottom-20" data-id={ result.artistId }>
         <div 
           className="thumb"
           onClick={ () => this.setState({ play: !this.state.play }) }

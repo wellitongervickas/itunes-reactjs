@@ -224,31 +224,6 @@ html, body, .app, #root, main {
     text-align: center; }
   .app .results {
     padding: 20px; }
-    .app .results-list .item {
-      display: grid;
-      grid-template-columns: 100px 1fr 40px;
-      grid-gap: 20px; }
-      .app .results-list .item .thumb {
-        min-width: 100px;
-        min-height: 100px;
-        position: relative; }
-        .app .results-list .item .thumb .player {
-          border-radius: 15px;
-          position: absolute;
-          background-color: rgba(0, 0, 0, 0.3);
-          width: 102px;
-          height: 102px;
-          color: #ff8a2b; }
-        .app .results-list .item .thumb img {
-          border-radius: 15px;
-          border: 1px solid #ddd; }
-      .app .results-list .item .name {
-        color: #444;
-        font-size: 16px; }
-      .app .results-list .item .artist-name a {
-        color: #666; }
-      .app .results-list .item .time {
-        color: #666; }
 
 footer {
   text-align: center;
@@ -314,3 +289,29 @@ header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10; }
+
+.song-thumb {
+  display: grid;
+  grid-template-columns: 100px 1fr 40px;
+  grid-gap: 20px; }
+  .song-thumb .thumb {
+    min-width: 100px;
+    min-height: 100px;
+    position: relative; }
+    .song-thumb .thumb .player {
+      border-radius: 15px;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.3);
+      width: 102px;
+      height: 102px;
+      color: #ff8a2b; }
+    .song-thumb .thumb img {
+      border-radius: 15px;
+      border: 1px solid #ddd; }
+  .song-thumb .name {
+    color: #444;
+    font-size: 16px; }
+  .song-thumb .artist-name a {
+    color: #666; }
+  .song-thumb .time {
+    color: #666; }
