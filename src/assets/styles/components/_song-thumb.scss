@@ -43,4 +43,11 @@
       color: #ff6868;
     }
   }
+
+
+  @media (max-width: 767.98px) {
+    &:last-of-type {
+      border-bottom: 0;
+    }
+  }
 }

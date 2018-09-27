@@ -6,3 +6,11 @@
 // @media (min-width: 1200px) {}
 
 @import './grid';
+
+.container {
+  margin: 0 auto;
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+}

@@ -3,6 +3,11 @@
     height: 200px;
     background-size: cover;
     background-position: center center;
+    background-color: var(--color-primary);
+
+    @media (min-width: 1200px) {
+      height: 400px;
+    }
   }
 
   &-content {

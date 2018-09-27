@@ -5,20 +5,20 @@ class Track {
     this.collectionName = props.collectionName;
     this.previewUrl = props.previewUrl;
     this.primaryGenreName = props.primaryGenreName;
-    this.artworkUrl100 = props.artworkUrl100;
+    this.artworkUrl60 = props.artworkUrl60;
     this.trackCensoredName = props.trackCensoredName;
     this.trackName = props.trackName;
     this.trackTimeMillis = props.trackTimeMillis;
   }
 
   get thumb() {
-    return this.artworkUrl100;
+    return this.artworkUrl60;
   }
 
   get thumbBig() {
 
     let newSize = '1920x800cc.jpg';
-    let newImage = this.artworkUrl100.split('/');
+    let newImage = this.artworkUrl60.split('/');
     newImage.pop();
     newImage.push(newSize);
     newImage = newImage.join('/');

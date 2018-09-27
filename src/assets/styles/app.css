@@ -118,7 +118,8 @@ body {
   font-size: 14px; }
 
 html, body, .app, #root, main {
-  height: 100%; }
+  height: 100%;
+  overflow-x: hidden; }
 
 :root {
   --color-primary: #333333; }
@@ -208,6 +209,12 @@ html, body, .app, #root, main {
     .grid.grid-md-4 {
       grid-template-columns: repeat(4, 1fr); } }
 
+.container {
+  margin: 0 auto; }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1200px; } }
+
 .app {
   display: grid;
   grid-template-rows: auto 1fr 40px; }
@@ -227,7 +234,11 @@ html, body, .app, #root, main {
   .app .artist-thumb {
     height: 200px;
     background-size: cover;
-    background-position: center center; }
+    background-position: center center;
+    background-color: var(--color-primary); }
+    @media (min-width: 1200px) {
+      .app .artist-thumb {
+        height: 400px; } }
   .app .artist-content {
     padding: 20px; }
     .app .artist-content h1 {
@@ -330,3 +341,23 @@ header {
     color: #666; }
   .song-thumb.played .artist-name, .song-thumb.played .name, .song-thumb.played .time {
     color: #ff6868; }
+  @media (max-width: 767.98px) {
+    .song-thumb:last-of-type {
+      border-bottom: 0; } }
+
+.collection-thumb {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd; }
+  .collection-thumb .thumb {
+    min-width: 100px;
+    min-height: 100px;
+    position: relative; }
+    .collection-thumb .thumb img {
+      border-radius: 15px;
+      border: 1px solid #ddd; }
+  @media (max-width: 767.98px) {
+    .collection-thumb:last-of-type {
+      border-bottom: 0; } }

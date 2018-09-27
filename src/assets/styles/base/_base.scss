@@ -10,6 +10,7 @@ body {
 
 html, body, .app, #root, main {
   height: 100%;
+  overflow-x: hidden;
 }
 
 :root {

@@ -10,7 +10,7 @@ class Results extends Component {
     const { texts, warnings } = config.lang;
     
     return (
-      <div className="results">
+      <div className="results container">
         <h2 className="mg-bottom-20">
           { texts.results }
           <small>({ searchResults && searchResults.length })</small>

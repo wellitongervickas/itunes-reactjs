@@ -45,10 +45,10 @@ class Artist extends Component {
           { background && 
             <div style={{ backgroundImage: `url(${background.thumbBig})` }} className="artist-thumb"></div>
           }
-          <div className="artist-content">
+          <div className="artist-content container">
             <h1 className="mg-bottom-20">{ artistDetails.artistName }</h1>
             <p className="artist-description mg-bottom-40">{ descriptions.fake_description }</p>
-            <div className="artist-list grid grid-lg-4 grid-md-3 grid-sm-2 grid-xs-1">
+            <div className="artist-list mg-bottom-40 grid grid-lg-4 grid-md-3 grid-sm-2 grid-xs-1">
               { artistCollections && artistCollections.length ?
                 artistCollections.map((item, index) => <CollectionThumb key={ index } result={ item } /> ) : warnings.empty_list
               }
