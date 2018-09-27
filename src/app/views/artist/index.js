@@ -57,11 +57,12 @@ class Artist extends Component {
               </div>
             </div>
             
-            <div className="artist-list mg-bottom-40 mg-top-40 grid">
+            <div className="artist-list mg-top-40 grid">
               { artistCollections && artistCollections.length > 0 && 
                 artistCollections.map((item, index) => <CollectionThumb  trackCount={ item.trackCount } key={ index } result={ item } /> )}
             </div>
 
+            <h3 className="text-center">{ texts.featured_artists }</h3>
             <div className="artist-related mg-bottom-40 mg-top-40 grid grid-lg-4 grid-md-3 grid-sm-2 grid-xs-2">
               { artistRelated && artistRelated.length > 0 && 
                 artistRelated.map((item, index) => <ArtistThumb key={ index } result={ item } /> )}
