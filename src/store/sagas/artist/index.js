@@ -16,15 +16,15 @@ export function* asyncGetArtistById(action) {
   const artistDetails = yield call(middlewareSagasUpdate, getArtistById, action.payload);
   if (artistDetails && artistDetails.results) {
 
-    // Find artist details and collections by artist id
+    // Find artist details
     const artist = artistDetails.results.find(item => item.wrapperType === 'artist');
-    const artistCollections = yield call(middlewareSagasUpdate, getArtistCollections, action.payload);
-
     yield put({ type: 'SET_ARTIST_DETAILS', payload: new Artist(artist) });
-
+     
+    // Get collections by artist id
+    const artistCollections = yield call(middlewareSagasUpdate, getArtistCollections, action.payload);
     if (artistCollections) {
 
-      // Get only collections wrapper type
+      // Get only collections wrapper type 'colletction'
       let collections = artistCollections.results.filter(item => item.wrapperType === 'collection');
       collections = collections.map(item => new Collection(item));
       
