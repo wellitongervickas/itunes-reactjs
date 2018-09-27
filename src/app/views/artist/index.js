@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import * as artistActions from '../../../store/actions/artist';
 
-import { TrackThumb, CollectionThumb } from '../../../components';
+import { /*TrackThumb,*/ CollectionThumb } from '../../../components';
 import config from '../../../config';
 
 class Artist extends Component {
@@ -35,7 +35,7 @@ class Artist extends Component {
 
   render() {
 
-    const { texts, warnings, descriptions } = config.lang;
+    const { texts, /*warnings,*/ descriptions } = config.lang;
     const { artistDetails, artistCollections, artistBackground } = this.props;
 
     if (artistDetails) {
@@ -60,11 +60,9 @@ class Artist extends Component {
             <div className="artist-list mg-bottom-40 grid">
               { artistCollections && artistCollections.length > 0 && 
                 artistCollections.map((item, index) => 
-                <CollectionThumb 
-                  trackCount={ item.trackCount }
-                  key={ index } 
-                  result={ item }>
-                  <h1 className="mg-bottom-20">{ artistDetails.collectionName }</h1>
+
+                <CollectionThumb  trackCount={ item.trackCount } key={ index } result={ item }>
+                  {/* <h1 className="mg-bottom-20">{ artistDetails.collectionName }</h1>
                   <div className="artist-listen">
                     <a target="_blank" href={ item.collectionViewUrl } className="artist-listen-btn">
                       Listen on <b>Apple Music</b>
@@ -82,8 +80,9 @@ class Artist extends Component {
                       item.tracks.map((item, index) => 
                       <TrackThumb key={ index } result={ item } /> ) : warnings.empty_list
                     }
-                  </div>
+                  </div> */}
                 </CollectionThumb>
+                
               )}
             </div>
             

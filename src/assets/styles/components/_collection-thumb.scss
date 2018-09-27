@@ -1,15 +1,10 @@
 .collection-thumb {
-  .name {
-    font-size: 25px;
-    margin-bottom: 10px;
-  }
-
   .intro {
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-gap: 20px;
     
-    &-thumb {
+    .thumb {
       min-width: 100px;
       min-height: 100px;
       position: relative;
@@ -20,11 +15,73 @@
       }
     }
 
-    &-details {
+    .details {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-content: flex-start;
       flex-direction: column;
+      
+      &-name {
+        font-size: 20px;
+      }
+
+      &-tracks-count {
+        color: #666;
+      }
+    }
+  }
+
+  .content {
+    &-listen-on {
+      a {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 5px;
+        color: #c94253;
+        border: 1px solid #c94253;
+        background-color: #fff;
+          span {
+          margin-left: 5px;
+          margin-right: 0;
+        }
+      }
+    }
+
+    &-tracks {
+      display: grid;
+      grid-gap: 20px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 40px;
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+
+      .thumb {
+        img {
+          width: 100%;
+        }
+      }
+
+      .details {
+        &-track-counts {
+          color: #666;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .content {
+      .details {
+        &-name {
+          font-size: 32px;
+        }
+      }
     }
   }
 
