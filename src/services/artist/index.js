@@ -26,7 +26,7 @@ export function getArtistById(id) {
 
 export function getArtistCollections(id) {
 
-  const route = `${url}${search.artist}${id}&entity=album&limit=2`;
+  const route = `${url}${search.artist}${id}&entity=album&limit=3`;
   return middleware.requestAxios().get(route)
   .then(res => res).catch(e => e);
 };

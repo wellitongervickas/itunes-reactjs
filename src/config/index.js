@@ -5,7 +5,7 @@ import { routesApp, routesList } from './routes';
 import storage from './storage';
 import errors from './errors'
 
-const { ptBr } = locales;
+const { en } = locales;
 
 export default {
   errors,
@@ -14,5 +14,5 @@ export default {
   storage,
   routesList,
   routesApp,
-  lang: ptBr,
+  lang: en,
 };

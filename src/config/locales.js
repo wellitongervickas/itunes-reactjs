@@ -1,5 +1,5 @@
-import ptBr from '../locales/pt-BR.json';
+import en from '../locales/en.json';
 
 export default {
-  ptBr
+  en
 };
