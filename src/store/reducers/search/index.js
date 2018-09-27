@@ -8,7 +8,7 @@ export default function search(state = INITIAL_STATE, action) {
       return INITIAL_STATE;
     
     case 'SET_SEARCH_RESULTS':
-      return {...state, searchResults: action.payload };
+      return { ...state, searchResults: action.payload };
 
     default:
       return {...state };

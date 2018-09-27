@@ -3,6 +3,7 @@ import { middlewareSagasUpdate } from '../middleware';
 import { setRouteSagas } from '../middleware/history';
 import { searchTerm } from '../../../services';
 import Track from '../../../model/class/track';
+
 import config from '../../../config';
 
 /** 
@@ -13,11 +14,10 @@ import config from '../../../config';
 
 export function* asyncSearchTerm(action) {
 
-  const result = yield call(middlewareSagasUpdate, searchTerm, action.payload);
-  if (result) {
-
-    const resultsList = result.results.map(item => new Track(item));
-    yield put({ type: 'SET_SEARCH_RESULTS', payload: resultsList });
+  const search = yield call(middlewareSagasUpdate, searchTerm, action.payload);
+  if (search && search.results) {
+    
+    yield put({ type: 'SET_SEARCH_RESULTS', payload: search.results.map(item => new Track(item)) });
     yield call(setRouteSagas, config.routesList.results);
   }
 };

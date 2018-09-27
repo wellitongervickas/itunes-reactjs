@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class NotFound extends Component {
-  render() {
-    return (
-      <div>
-        #NotFound
-      </div>
-    )
-  }
-}
+const NotFound = () => (
+  <div className="not-found container flex flex-column-center">
+    404 Not Found
+  </div>
+);
+
+export default NotFound;

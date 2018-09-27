@@ -1,18 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import config from '../../../config';
 
-export default class Footer extends Component {
+const year = new Date().getFullYear();
 
-  render() {
+const Footer = () => (
+  <section>
+    <footer className="flex flex-around-center">
+        { config.app.appName } &copy; { year }
+    </footer>
+  </section>
+);
 
-    const year = new Date().getFullYear();
-    
-    return (
-      <section>
-        <footer className="flex flex-around-center">
-            { config.app.appName } &copy; { year }
-        </footer>
-      </section>
-    )
-  }
-}
+export default Footer;

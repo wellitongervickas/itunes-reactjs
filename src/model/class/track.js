@@ -1,3 +1,5 @@
+import { getThumbBig } from "../helpers/thumb";
+
 class Track {
   constructor(props) {
     this.artistId = props.artistId;
@@ -16,14 +18,7 @@ class Track {
   }
 
   get thumbBig() {
-
-    let newSize = '1920x800cc.jpg';
-    let newImage = this.artworkUrl60.split('/');
-    newImage.pop();
-    newImage.push(newSize);
-    newImage = newImage.join('/');
-
-    return newImage; 
+    return getThumbBig(this.artworkUrl60);
   }
 
   get trackTime() {

@@ -3,6 +3,7 @@ const INITIAL_STATE = {
   artistBackground: null,
   artistCollections: [],
   artistTracks: [],
+  artistRelated: [],
 }
 
 export default function artist(state = INITIAL_STATE, action) {
@@ -21,6 +22,9 @@ export default function artist(state = INITIAL_STATE, action) {
 
     case 'SET_ARTIST_BACKGROUND':
       return {...state, artistBackground: action.payload };
+
+    case 'SET_ARTIST_RELATED':
+      return { ...state, artistRelated: action.payload };
 
     default:
       return {...state };

@@ -58,3 +58,18 @@ export function getTracksByCollectionId(id) {
   return middleware.requestAxios().get(route)
   .then(res => res).catch(e => e);
 };
+
+
+/**
+ * @function getArtistRelated
+ * 
+ * @public
+ *
+*/
+
+export function getArtistRelated(term) {
+
+  const route = `${url}${search.term}${encodeURIComponent(term)}&limit=4&entity=song&sort=recent`;
+  return middleware.requestAxios().get(route)
+  .then(res => res).catch(e => e);
+};

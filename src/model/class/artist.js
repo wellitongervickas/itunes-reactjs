@@ -3,6 +3,7 @@ class Artist {
     this.artistName = props.artistName;
     this.primaryGenreName = props.primaryGenreName;
     this.artistId = props.artistId;
+    this.artworkUrl100 = props.artworkUrl100 || null;
   }
 };
 

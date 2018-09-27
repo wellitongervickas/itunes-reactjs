@@ -52,7 +52,7 @@ class TrackThumb extends Component {
             <ReactPlayer 
               url={ result.previewUrl } 
               playing={ this.state.play } 
-              onEnded={ () => this.setState({ play: false }) }
+              onEnded={ () => this.setState({ play: false, percentage: 0 }) }
               onProgress={ e => this.updatePercentage(e) }
             />
           </div>

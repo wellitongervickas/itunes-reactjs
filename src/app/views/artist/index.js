@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import * as artistActions from '../../../store/actions/artist';
 
-import { CollectionThumb } from '../../../components';
+import { CollectionThumb, ArtistThumb } from '../../../components';
 import config from '../../../config';
 
 class Artist extends Component {
@@ -36,13 +36,13 @@ class Artist extends Component {
   render() {
 
     const { texts, descriptions } = config.lang;
-    const { artistDetails, artistCollections, artistBackground } = this.props;
+    const { artistDetails, artistCollections, artistBackground, artistRelated } = this.props;
 
     if (artistDetails) {
       return (
         <div className="artist">
           { artistBackground && 
-            <div style={{ backgroundImage: `url(${artistBackground})` }} className="artist-thumb"></div>
+            <div style={{ backgroundImage: `url(${artistBackground})` }} className="artist-background"></div>
           }
           <div className="artist-content container grid">
             <h1 className="mg-bottom-0">{ artistDetails.artistName }</h1>
@@ -60,6 +60,11 @@ class Artist extends Component {
             <div className="artist-list mg-bottom-40 mg-top-40 grid">
               { artistCollections && artistCollections.length > 0 && 
                 artistCollections.map((item, index) => <CollectionThumb  trackCount={ item.trackCount } key={ index } result={ item } /> )}
+            </div>
+
+            <div className="artist-related mg-bottom-40 mg-top-40 grid grid-lg-4 grid-md-3 grid-sm-2 grid-xs-2">
+              { artistRelated && artistRelated.length > 0 && 
+                artistRelated.map((item, index) => <ArtistThumb key={ index } result={ item } /> )}
             </div>
             
             <div className="artist-actions btn-control text-center mg-top-20 mg-bottom-20">
@@ -82,6 +87,7 @@ const mapStateToProps = state => ({
   artistDetails: state.artist.artistDetails,
   artistCollections: state.artist.artistCollections,
   artistBackground: state.artist.artistBackground,
+  artistRelated: state.artist.artistRelated,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(artistActions, dispatch);

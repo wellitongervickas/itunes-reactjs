@@ -17,5 +17,7 @@ export function* middlewareSagasUpdate(service, payload) {
 
   if((request && request.status) && (request.status <= 299 && request.status >= 200)) {
     return request && request.data ? request.data : request;
+  } else {
+    return null;
   }
 };

@@ -247,14 +247,14 @@ html, body, .app, #root, main {
     text-align: center; }
   .app .results {
     padding: 20px; }
-  .app .artist-thumb {
+  .app .artist-background {
     height: 200px;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     background-color: var(--color-primary); }
     @media (min-width: 1200px) {
-      .app .artist-thumb {
+      .app .artist-background {
         height: 400px; } }
   .app .artist-content {
     padding: 20px; }
@@ -279,6 +279,10 @@ html, body, .app, #root, main {
       color: #999; }
     .app .artist-details p {
       font-size: 18px; }
+  .app .not-found {
+    height: 100%;
+    text-align: center;
+    font-size: 22px; }
 
 footer {
   text-align: center;
@@ -364,7 +368,8 @@ header {
       color: #ff6868; }
       .track-thumb .thumb .player span {
         position: absolute;
-        z-index: 2; }
+        z-index: 2;
+        font-size: 10px; }
       .track-thumb .thumb .player svg.circular-chart {
         z-index: 1;
         position: absolute;
@@ -462,3 +467,10 @@ header {
 @keyframes progress {
   0% {
     stroke-dasharray: 0 100; } }
+
+.artist-thumb {
+  text-align: center; }
+  .artist-thumb .thumb img {
+    border-radius: 100%; }
+  .artist-thumb .name p {
+    color: #666; }

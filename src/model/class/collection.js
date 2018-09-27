@@ -1,4 +1,5 @@
 import config from "../../config";
+import { getThumbBig } from "../helpers/thumb";
 
 class Collection {
   constructor(props) {
@@ -18,13 +19,7 @@ class Collection {
 
   get thumbBig() {
 
-    let newSize = '1920x800cc.jpg';
-    let newImage = this.artworkUrl100.split('/');
-    newImage.pop();
-    newImage.push(newSize);
-    newImage = newImage.join('/');
-
-    return newImage; 
+    return getThumbBig(this.artworkUrl100);
   }
 };
 
