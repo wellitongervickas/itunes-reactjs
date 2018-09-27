@@ -10,7 +10,7 @@ class Header extends Component {
         <header>
           <Logo />
           <div 
-            className="pointer" 
+            className="pointer text-right" 
             onClick={ () => this.props.history.push(config.routesList.introduction) }>
             <span className="fas fa-home"></span>
           </div>
