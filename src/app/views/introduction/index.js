@@ -11,7 +11,7 @@ import { Form, Input } from '../../../components';
 class Introduction extends Component {
 
   state = {
-    searchField: 'Lucky you',
+    searchField: '',
   }
 
   componentWillMount() {
@@ -48,7 +48,7 @@ class Introduction extends Component {
             <div className="btn-control mg-top-20">
               <button className="btn btn-primary">
                 <span className="fas fa-search"></span>
-                { texts.send }
+                { texts.search }
               </button>
             </div>
           </Form>

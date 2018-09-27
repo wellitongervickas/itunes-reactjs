@@ -224,6 +224,17 @@ html, body, .app, #root, main {
     text-align: center; }
   .app .results {
     padding: 20px; }
+  .app .artist-thumb {
+    height: 200px;
+    background-size: cover;
+    background-position: center center; }
+  .app .artist-content {
+    padding: 20px; }
+    .app .artist-content h1 {
+      font-size: 42px; }
+  .app .artist-description {
+    font-size: 22px;
+    color: #666; }
 
 footer {
   text-align: center;
@@ -292,26 +303,30 @@ header {
 
 .song-thumb {
   display: grid;
-  grid-template-columns: 100px 1fr 40px;
-  grid-gap: 20px; }
+  grid-template-columns: 60px 1fr 40px;
+  grid-gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd; }
   .song-thumb .thumb {
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 60px;
+    min-height: 60px;
     position: relative; }
     .song-thumb .thumb .player {
       border-radius: 15px;
       position: absolute;
-      background-color: rgba(0, 0, 0, 0.3);
-      width: 102px;
-      height: 102px;
-      color: #ff8a2b; }
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 62px;
+      height: 62px;
+      color: #ff6868; }
     .song-thumb .thumb img {
       border-radius: 15px;
       border: 1px solid #ddd; }
   .song-thumb .name {
     color: #444;
     font-size: 16px; }
-  .song-thumb .artist-name a {
+  .song-thumb .artist-name {
     color: #666; }
   .song-thumb .time {
     color: #666; }
+  .song-thumb.played .artist-name, .song-thumb.played .name, .song-thumb.played .time {
+    color: #ff6868; }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import config from '../../../config';
-import { SongThumb } from '../../../components';
+import { TrackThumb } from '../../../components';
 
 class Results extends Component {
   render() {
@@ -15,9 +15,9 @@ class Results extends Component {
           { texts.results }
           <small>({ searchResults && searchResults.length })</small>
         </h2>
-        <div className="results-list">
+        <div className="results-list grid grid-lg-4 grid-md-3 grid-sm-2 grid-xs-1">
           { searchResults && searchResults.length ?
-            searchResults.map((item, index) => <SongThumb key={ index } result={ item } /> ) : warnings.empty_list
+            searchResults.map((item, index) => <TrackThumb key={ index } result={ item } /> ) : warnings.empty_list
           }
         </div>
         <div className="results-actions btn-control text-center mg-top-20 mg-bottom-20">

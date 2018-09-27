@@ -1,5 +1,5 @@
 /**
- * See all documentation of itunes api
+ * See iTunes documentation 
  * Link: https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/ 
 */
 
@@ -27,5 +27,6 @@ export default {
   search: {
     base: '/search',
     term: '/search?term=',
+    artist: '/lookup?id=',
   }
 };

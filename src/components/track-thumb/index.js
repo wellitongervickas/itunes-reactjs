@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import ReactPlayer from 'react-player'; //https://www.npmjs.com/package/react-player
 import config from '../../config';
 
-class SongThumb extends Component {
+class TrackThumb extends Component {
 
   state = {
     play: false,
@@ -16,23 +16,23 @@ class SongThumb extends Component {
     const { result } = this.props;
     
     return (
-      <div className="song-thumb mg-bottom-20" data-id={ result.artistId }>
+      <div className={ 'song-thumb ' + (this.state.play ? ' played' : '')} data-id={ result.artistId }>
         <div 
-          className="thumb"
+          className={ 'thumb' + (this.state.play ? ' animated infinite pulse' : '') }
           onClick={ () => this.setState({ play: !this.state.play }) }
           onMouseOver={ () => this.setState({ control: true }) }
           onMouseLeave={ () => this.setState({ control: this.state.play ? true : false }) }>
           <div className={'player pointer flex flex-around-center animated ' + (this.state.control ? 'bounceIn' : 'bounceOut') }>
             <span className={ 'fas fa-' + (!this.state.play ? 'play' : 'pause') }></span>
           </div>
-          <img src={ result.thumb } alt={ result.collectionName } />
+          <img src={ result.thumb } alt={ result.collectionName } width="60" />
         </div>
         <div className="details flex flex-column-center">
           <h3 className="name mg-bottom-10">{ result.trackName }</h3>
-          <div className="artist-name">
-            <NavLink to={ `${config.routesList.artist}/${result.artistId}` }>
-              { result.artistName }
-            </NavLink>
+          <div 
+            onClick={ () => this.props.history.push(`${config.routesList.artist}/${result.artistId}`) }
+            className="artist-name pointer">
+            { result.artistName }
           </div>
           <div className="hide">
             <ReactPlayer 
@@ -51,4 +51,4 @@ class SongThumb extends Component {
   }
 }
 
-export default SongThumb;
+export default withRouter(TrackThumb);

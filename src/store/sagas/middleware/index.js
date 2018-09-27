@@ -1,6 +1,7 @@
 import { call, put } from 'redux-saga/effects';
 import { setLoadingStatus } from '../../actions/loading';
 
+
 /**
  * @function middlewareSagasUpdate
  *
@@ -11,8 +12,10 @@ import { setLoadingStatus } from '../../actions/loading';
 export function* middlewareSagasUpdate(service, payload) {
 
   yield put(setLoadingStatus(true));
-  const result = yield call(service, payload);
-
+  const request = yield call(service, payload);
   yield put(setLoadingStatus(false));
-  return result && result.data ? result.data : result;
+
+  if((request && request.status) && (request.status <= 299 && request.status >= 200)) {
+    return request && request.data ? request.data : request;
+  }
 };

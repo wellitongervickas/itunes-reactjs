@@ -1,6 +1,7 @@
 .app {
   @import './introduction';
   @import './results';
+  @import './artist';
 
   display: grid;
   grid-template-rows: auto 1fr 40px;

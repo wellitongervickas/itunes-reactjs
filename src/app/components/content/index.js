@@ -14,25 +14,12 @@ class Content extends Component {
         <main>
           <Switch ref="switch">
             { routesList.map((item, index) =>
-              !item.hasOwnProperty('childRoutes') && item.hasOwnProperty('exact') ? (
-                <Route
-                  sensitive
-                  key={ index }
-                  path={ item.path }
-                  exact={ item.exact }
-                  component={ item.main }
-                />
-                ):(
-                item.childRoutes.map((child, childIndex) =>(
-                  <Route
-                    sensitive
-                    key={ childIndex }
-                    path={ child.path }
-                    exact={ child.exact }
-                    component={ child.main }
-                  />
-                ))
-              )
+              <Route
+                key={ index }
+                path={ item.path }
+                exact={ item.exact }
+                component={ item.main }
+              />
             )}
           </Switch>
         </main>

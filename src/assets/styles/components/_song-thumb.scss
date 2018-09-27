@@ -1,20 +1,22 @@
 .song-thumb {
   display: grid;
-  grid-template-columns: 100px 1fr 40px;
+  grid-template-columns: 60px 1fr 40px;
   grid-gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
 
   .thumb {
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 60px;
+    min-height: 60px;
     position: relative;
 
     .player {
       border-radius: 15px;
       position: absolute;
-      background-color: rgba(0,0,0,0.3);
-      width: 102px;
-      height: 102px;
-      color: #ff8a2b;
+      background-color: rgba(255,255,255,0.8);
+      width: 62px;
+      height: 62px;
+      color: #ff6868;
     }
     
     img {
@@ -28,11 +30,17 @@
     font-size: 16px;
   }
 
-  .artist-name a {
+  .artist-name {
     color: #666;
   }
 
   .time {
     color: #666;
+  }
+
+  &.played {
+    .artist-name, .name, .time {
+      color: #ff6868;
+    }
   }
 }

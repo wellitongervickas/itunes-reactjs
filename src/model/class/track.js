@@ -1,4 +1,4 @@
-class Song {
+class Track {
   constructor(props) {
     this.artistId = props.artistId;
     this.artistName = props.artistName;
@@ -15,9 +15,20 @@ class Song {
     return this.artworkUrl100;
   }
 
+  get thumbBig() {
+
+    let newSize = '1920x800cc.jpg';
+    let newImage = this.artworkUrl100.split('/');
+    newImage.pop();
+    newImage.push(newSize);
+    newImage = newImage.join('/');
+
+    return newImage; 
+  }
+
   get trackTime() {
     return (this.trackTimeMillis / 60000).toFixed(2);
   }
 };
 
-export default Song;
+export default Track;
