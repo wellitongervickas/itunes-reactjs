@@ -1,4 +1,4 @@
-.song-thumb {
+.track-thumb {
   display: grid;
   grid-template-columns: 60px 1fr 40px;
   grid-gap: 20px;
@@ -17,6 +17,16 @@
       width: 62px;
       height: 62px;
       color: #ff6868;
+
+      span {
+        position: absolute;
+        z-index: 2;
+      }
+      svg.circular-chart {
+        z-index: 1;
+        position: absolute;
+        top: -3px;
+      }
     }
     
     img {

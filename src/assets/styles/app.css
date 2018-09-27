@@ -251,6 +251,7 @@ html, body, .app, #root, main {
     height: 200px;
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
     background-color: var(--color-primary); }
     @media (min-width: 1200px) {
       .app .artist-thumb {
@@ -344,37 +345,44 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10; }
 
-.song-thumb {
+.track-thumb {
   display: grid;
   grid-template-columns: 60px 1fr 40px;
   grid-gap: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd; }
-  .song-thumb .thumb {
+  .track-thumb .thumb {
     min-width: 60px;
     min-height: 60px;
     position: relative; }
-    .song-thumb .thumb .player {
+    .track-thumb .thumb .player {
       border-radius: 15px;
       position: absolute;
       background-color: rgba(255, 255, 255, 0.8);
       width: 62px;
       height: 62px;
       color: #ff6868; }
-    .song-thumb .thumb img {
+      .track-thumb .thumb .player span {
+        position: absolute;
+        z-index: 2; }
+      .track-thumb .thumb .player svg.circular-chart {
+        z-index: 1;
+        position: absolute;
+        top: -3px; }
+    .track-thumb .thumb img {
       border-radius: 15px;
       border: 1px solid #ddd; }
-  .song-thumb .name {
+  .track-thumb .name {
     color: #444;
     font-size: 16px; }
-  .song-thumb .artist-name {
+  .track-thumb .artist-name {
     color: #999; }
-  .song-thumb .time {
+  .track-thumb .time {
     color: #666; }
-  .song-thumb.played .artist-name, .song-thumb.played .name, .song-thumb.played .time {
+  .track-thumb.played .artist-name, .track-thumb.played .name, .track-thumb.played .time {
     color: #ff6868; }
   @media (max-width: 767.98px) {
-    .song-thumb:last-of-type {
+    .track-thumb:last-of-type {
       border-bottom: 0; } }
 
 .collection-thumb .intro {
@@ -438,3 +446,19 @@ header {
 @media (max-width: 767.98px) {
   .collection-thumb:last-of-type {
     border-bottom: 0; } }
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px; }
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards; }
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100; } }
