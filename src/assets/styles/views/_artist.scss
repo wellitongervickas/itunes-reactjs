@@ -17,9 +17,108 @@
       font-size: 42px;
     }
   }
+
+  .artist-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 5fr 3fr;
+    }
+  }
   
   &-description {
-    font-size: 22px;
-    color: #666;
+    p {
+      font-size: 22px;
+      color: #666;
+    }
+  }
+
+  &-details {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+    h4 {
+      text-transform: uppercase;
+      color: #999;
+    }
+  
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .collection-thumb {
+    .content {
+      @media (max-width: 767.98px) {
+        margin-top: 20px;
+      }
+  
+      h2 {
+        border-bottom: 0;
+      }
+
+      .artist-listen {
+        margin-top:40px;
+        margin-bottom: 40px;
+      }
+      
+      .artist-listen-btn {
+        padding: 8px 12px;
+        border-radius: 5px;
+        color: #c94253;
+        border: 1px solid #c94253;
+        background-color: #fff;
+  
+        span {
+          margin-left: 5px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &-list {
+    @media (min-width: 768px) {
+      .collection-thumb {
+        display: grid;
+        grid-gap: 40px;
+        grid-template-columns: 250px 1fr;
+
+        .content {
+          .artist-listen {
+            margin-top: 0;
+            margin-bottom: 40px;
+          }
+        }
+
+        .intro {
+          display: flex;
+          justify-content: start;
+          align-items: flex-start;
+          flex-direction: column;
+
+          &-thumb {
+            &, img {
+              width: 100%;
+            }
+          }
+        }
+
+        .artist-name, .artist-tracks {
+          color: #999;
+        }
+        
+        .artist-description {
+          margin-top: 20px;
+
+          h2, p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
   }
 }

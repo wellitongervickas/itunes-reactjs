@@ -36,30 +36,57 @@ class Artist extends Component {
   render() {
 
     const { texts, warnings, descriptions } = config.lang;
-    const { artistDetails, artistTracks, artistCollections } = this.props;
-    const background = artistTracks.find(item => item.artistName === artistDetails.artistName);
+    const { artistDetails, artistCollections, artistBackground } = this.props;
 
     if (artistDetails) {
       return (
         <div className="artist">
-          { background && 
-            <div style={{ backgroundImage: `url(${background.thumbBig})` }} className="artist-thumb"></div>
+          { artistBackground && 
+            <div style={{ backgroundImage: `url(${artistBackground})` }} className="artist-thumb"></div>
           }
           <div className="artist-content container">
             <h1 className="mg-bottom-20">{ artistDetails.artistName }</h1>
-            <p className="artist-description mg-bottom-40">{ descriptions.fake_description }</p>
-            <div className="artist-list mg-bottom-40 grid grid-lg-4 grid-md-3 grid-sm-2 grid-xs-1">
-              { artistCollections && artistCollections.length ?
-                artistCollections.map((item, index) => <CollectionThumb key={ index } result={ item } /> ) : warnings.empty_list
-              }
+
+            <div className="artist-info mg-bottom-40">
+              <div className="artist-description">
+                <p>{ descriptions.fake_description }</p>
+              </div>
+              <div className="artist-details">
+                <h4 className="mg-bottom-10">Genre</h4>
+                <p>{ artistDetails.primaryGenreName }</p>
+              </div>
             </div>
-            <h2>{ texts.editors_notes }</h2>
-            <p className="artist-description mg-bottom-40">{ descriptions.fake_description }</p>
-            <div className="artist-list grid grid-lg-4 grid-md-3 grid-sm-2 grid-xs-1">
-              { artistTracks && artistTracks.length ?
-                artistTracks.map((item, index) => <TrackThumb key={ index } result={ item } /> ) : warnings.empty_list
-              }
+            
+            <div className="artist-list mg-bottom-40 grid">
+              { artistCollections && artistCollections.length > 0 && 
+                artistCollections.map((item, index) => 
+                <CollectionThumb 
+                  trackCount={ item.trackCount }
+                  key={ index } 
+                  result={ item }>
+                  <h1 className="mg-bottom-20">{ artistDetails.collectionName }</h1>
+                  <div className="artist-listen">
+                    <a target="_blank" href={ item.collectionViewUrl } className="artist-listen-btn">
+                      Listen on <b>Apple Music</b>
+                      <span className="fas fa-external-link-alt"></span>
+                    </a>
+                  </div>
+
+                  <div className="artist-description hide-md hide-lg">
+                    <h2>{ texts.editors_notes }</h2>
+                    <p className="mg-bottom-40">{ item.description }</p>
+                  </div>
+
+                  <div className="artist-list grid">
+                    { item.tracks && item.tracks.length ?
+                      item.tracks.map((item, index) => 
+                      <TrackThumb key={ index } result={ item } /> ) : warnings.empty_list
+                    }
+                  </div>
+                </CollectionThumb>
+              )}
             </div>
+            
             <div className="artist-actions btn-control text-center mg-top-20 mg-bottom-20">
               <button
                 className="btn"
@@ -79,7 +106,7 @@ class Artist extends Component {
 const mapStateToProps = state => ({
   artistDetails: state.artist.artistDetails,
   artistCollections: state.artist.artistCollections,
-  artistTracks: state.artist.artistTracks,
+  artistBackground: state.artist.artistBackground,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(artistActions, dispatch);

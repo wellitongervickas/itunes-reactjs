@@ -16,7 +16,6 @@ const { url, search } = config.api;
 export function searchTerm(term) {
 
   const route = `${url}${search.term}${encodeURIComponent(term)}&entity=song`;
-  
   return middleware.requestAxios().get(route)
   .then(res => res).catch(e => e);
 };

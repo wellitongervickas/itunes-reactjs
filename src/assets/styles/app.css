@@ -209,6 +209,22 @@ html, body, .app, #root, main {
     .grid.grid-md-4 {
       grid-template-columns: repeat(4, 1fr); } }
 
+@media (max-width: 575.98px) {
+  .hide-xs {
+    display: none; } }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hide-sm {
+    display: none; } }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hide-md {
+    display: none; } }
+
+@media (min-width: 992px) {
+  .hide-lg {
+    display: none; } }
+
 .container {
   margin: 0 auto; }
   @media (min-width: 1200px) {
@@ -243,9 +259,63 @@ html, body, .app, #root, main {
     padding: 20px; }
     .app .artist-content h1 {
       font-size: 42px; }
-  .app .artist-description {
+  .app .artist .artist-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px; }
+    @media (min-width: 768px) {
+      .app .artist .artist-info {
+        grid-template-columns: 5fr 3fr; } }
+  .app .artist-description p {
     font-size: 22px;
     color: #666; }
+  .app .artist-details {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 5px; }
+    .app .artist-details h4 {
+      text-transform: uppercase;
+      color: #999; }
+    .app .artist-details p {
+      font-size: 18px; }
+  @media (max-width: 767.98px) {
+    .app .artist .collection-thumb .content {
+      margin-top: 20px; } }
+  .app .artist .collection-thumb .content h2 {
+    border-bottom: 0; }
+  .app .artist .collection-thumb .content .artist-listen {
+    margin-top: 40px;
+    margin-bottom: 40px; }
+  .app .artist .collection-thumb .content .artist-listen-btn {
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #c94253;
+    border: 1px solid #c94253;
+    background-color: #fff; }
+    .app .artist .collection-thumb .content .artist-listen-btn span {
+      margin-left: 5px;
+      margin-right: 0; }
+  @media (min-width: 768px) {
+    .app .artist-list .collection-thumb {
+      display: grid;
+      grid-gap: 40px;
+      grid-template-columns: 250px 1fr; }
+      .app .artist-list .collection-thumb .content .artist-listen {
+        margin-top: 0;
+        margin-bottom: 40px; }
+      .app .artist-list .collection-thumb .intro {
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        flex-direction: column; }
+        .app .artist-list .collection-thumb .intro-thumb, .app .artist-list .collection-thumb .intro-thumb img {
+          width: 100%; }
+      .app .artist-list .collection-thumb .artist-name, .app .artist-list .collection-thumb .artist-tracks {
+        color: #999; }
+      .app .artist-list .collection-thumb .artist-description {
+        margin-top: 20px; }
+        .app .artist-list .collection-thumb .artist-description h2, .app .artist-list .collection-thumb .artist-description p {
+          font-size: 14px; } }
 
 footer {
   text-align: center;
@@ -336,7 +406,7 @@ header {
     color: #444;
     font-size: 16px; }
   .song-thumb .artist-name {
-    color: #666; }
+    color: #999; }
   .song-thumb .time {
     color: #666; }
   .song-thumb.played .artist-name, .song-thumb.played .name, .song-thumb.played .time {
@@ -345,19 +415,27 @@ header {
     .song-thumb:last-of-type {
       border-bottom: 0; } }
 
-.collection-thumb {
+.collection-thumb .name {
+  font-size: 25px;
+  margin-bottom: 10px; }
+
+.collection-thumb .intro {
   display: grid;
   grid-template-columns: 100px 1fr;
-  grid-gap: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ddd; }
-  .collection-thumb .thumb {
+  grid-gap: 20px; }
+  .collection-thumb .intro-thumb {
     min-width: 100px;
     min-height: 100px;
     position: relative; }
-    .collection-thumb .thumb img {
+    .collection-thumb .intro-thumb img {
       border-radius: 15px;
       border: 1px solid #ddd; }
-  @media (max-width: 767.98px) {
-    .collection-thumb:last-of-type {
-      border-bottom: 0; } }
+  .collection-thumb .intro-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; }
+
+@media (max-width: 767.98px) {
+  .collection-thumb:last-of-type {
+    border-bottom: 0; } }
