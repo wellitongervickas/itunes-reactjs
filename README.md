@@ -16,6 +16,8 @@
 ## Layout Changes
 - Created a footer
 - Created a header
+- New Introduction Page (with search)
+- New Results page 
 
 ## System Requirements
 - Npm 6.1.0
