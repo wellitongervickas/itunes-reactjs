@@ -4,11 +4,12 @@
  * @public
 */
 
-export function getPlayerPercentage(current, max) {
+export function getPlayerPercentage(current, max = 30) {
 
   let currentTime = Math.round(current.toFixed(1));
-  let maxTime = Math.round(max.toFixed(1));
-  let percentage = Math.round(currentTime*maxTime/100 * 10 );
+  let percentage = Math.round(currentTime * 100 / max);
+
+  console.log(percentage);
 
   return percentage;
 };

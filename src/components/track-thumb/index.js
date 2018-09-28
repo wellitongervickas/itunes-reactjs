@@ -20,7 +20,7 @@ class TrackThumb extends Component {
     this.setState({ progress });
 
     if (this.state.play && (loadedSeconds && playedSeconds)) {
-      this.setState({ percentage: getPlayerPercentage(loadedSeconds,playedSeconds) });
+      this.setState({ percentage: getPlayerPercentage(playedSeconds) });
     }
   }
   
