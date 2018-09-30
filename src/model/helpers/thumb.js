@@ -12,7 +12,7 @@
 
 export function getThumbBig(thumbUrl) {
 
-  let newSize = '1920x800cc.jpg';
+  const newSize = '1920x800cc.jpg';
   let newImage = thumbUrl.split('/');
   
   newImage.pop();
