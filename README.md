@@ -1,4 +1,4 @@
-# iTunes
+# iTunes + ReactJS
 
 ## Project Requirements
 - Make a responsive layout with HTML/CSS based on mobile first;
