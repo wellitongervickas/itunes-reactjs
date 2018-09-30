@@ -11,7 +11,10 @@
  *
  * > parseString('My name is %s and your is %s", 'foo', 'bar');
  * > Output => My name is foo and your is bar
- *
+ * 
+ * @param { string } text
+ * @param { array | string } rest
+ * @return { string }
  * @public
  *
 */

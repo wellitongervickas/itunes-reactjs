@@ -1,6 +1,12 @@
 /** 
  * @function getPlayerPercentage
  * 
+ * This function will return a 
+ * percentage of song played 0 to 100
+ * 
+ * @param { Number } current
+ * @param { Number | null } max
+ * @return { Number }
  * @public
 */
 

@@ -6,6 +6,7 @@ const { url, search } = config.api;
 /**
  * @function searchTerm
  * 
+ * @param { string } term
  * @public
  *
 */

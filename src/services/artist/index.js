@@ -6,6 +6,7 @@ const { url, search } = config.api;
 /**
  * @function getArtistById
  *
+ * @param { Number } id
  * @public
  *
 */
@@ -20,6 +21,7 @@ export function getArtistById(id) {
 /**
  * @function getArtistCollections
  * 
+ * @param { Number } id
  * @public
  *
 */
@@ -34,6 +36,7 @@ export function getArtistCollections(id) {
 /**
  * @function getArtistTracks
  * 
+ * @param { Number } id
  * @public
  *
 */
@@ -47,7 +50,8 @@ export function getArtistTracks(id) {
 
 /**
  * @function getTracksByCollectionId
- *
+ * 
+ * @param { Number } id
  * @public
  *
 */
@@ -63,6 +67,7 @@ export function getTracksByCollectionId(id) {
 /**
  * @function getArtistRelated
  * 
+ * @param { string } term
  * @public
  *
 */

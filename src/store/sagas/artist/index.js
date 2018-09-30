@@ -15,6 +15,7 @@ import Collection from '../../../model/class/collection';
 /** 
  * @function asyncGetArtistById
  * 
+ * @param { object } action
  * @public
 */
 
@@ -37,6 +38,7 @@ export function* asyncGetArtistById(action) {
 /**
  * @function getCollectiosByArtistId
  * 
+ * @param { Number } id
  * @private
 */
 
@@ -66,6 +68,7 @@ function* getCollectiosByArtistId(id) {
 /**
  * @function setArtistBackground
  * 
+ * @param { array } collections
  * @private
 */
 
@@ -79,6 +82,7 @@ function* setArtistBackground(collections) {
 /**
  * @function getArtistRelatedByGenre
  * 
+ * @param { string } genre
  * @private
 */
 

@@ -13,6 +13,11 @@ class Track {
     this.trackTimeMillis = props.trackTimeMillis;
   }
 
+  /** 
+   * This method will only return
+   * the thumbnail using a shortname
+  */
+
   get thumb() {
     return this.artworkUrl60;
   }
@@ -20,6 +25,11 @@ class Track {
   get thumbBig() {
     return getThumbBig(this.artworkUrl60);
   }
+
+  /**
+   * This method will return a track 
+   * time by minutes and seconds
+  */
 
   get trackTime() {
     return (this.trackTimeMillis / 60000).toFixed(2);

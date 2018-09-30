@@ -4,6 +4,7 @@ import { push } from 'react-router-redux';
 /**
  * @function setRouteSagas
  *
+ * @param { string } route
  * @public
  *
 */

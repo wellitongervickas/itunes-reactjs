@@ -13,6 +13,11 @@ class Collection {
     this.tracks = props.tracks || [];
   }
 
+  /** 
+   * This method will only return
+   * the thumbnail using a shortname
+  */
+ 
   get thumb() {
     return this.artworkUrl100;
   }

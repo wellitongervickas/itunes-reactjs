@@ -8,7 +8,7 @@ import React from 'react';
  * 
 */
 
-const Chart = (props) => (
+const Chart = props => (
   <svg viewBox="0 0 36 36" className="circular-chart">
     <path className="circle"
       stroke={ props.stroke ? props.stroke : '#ff6868' }

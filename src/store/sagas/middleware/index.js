@@ -5,6 +5,8 @@ import { setLoadingStatus } from '../../actions/loading';
 /**
  * @function middlewareSagasUpdate
  *
+ * @param { function } service
+ * @param { object | string | number | boolean | null } payload
  * @public
  *
 */
