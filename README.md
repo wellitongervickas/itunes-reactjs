@@ -1,5 +1,4 @@
-# iTunes Serasa Consumidor
-> This project has been created to validate a front-end challenge.
+# iTunes
 
 ## Project Requirements
 - Make a responsive layout with HTML/CSS based on mobile first;
