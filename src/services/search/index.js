@@ -6,6 +6,9 @@ const { url, search } = config.api;
 /**
  * @function searchTerm
  * 
+ * This function will return a 
+ * entity song by term
+ * 
  * @param { string } term
  * @public
  *

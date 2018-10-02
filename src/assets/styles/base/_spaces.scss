@@ -49,17 +49,3 @@
 .pd-top-40 {
   padding-top: 40px;
 }
-
-.mg-pd-bottom-disabled-last {
-  &:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-}
-
-.mg-pd-top-disabled-last {
-  &:last-of-type {
-    padding-top: 0;
-    margin-top: 0;
-  }
-}

@@ -12,12 +12,6 @@ input, textarea, button {
 input[type='number'] {
   appearance: textfield; }
 
-.text-left {
-  text-align: left; }
-
-.text-right {
-  text-align: right; }
-
 .pointer {
   cursor: pointer; }
 
@@ -62,14 +56,6 @@ input[type='number'] {
 
 .pd-top-40 {
   padding-top: 40px; }
-
-.mg-pd-bottom-disabled-last:last-of-type {
-  padding-bottom: 0;
-  margin-bottom: 0; }
-
-.mg-pd-top-disabled-last:last-of-type {
-  padding-top: 0;
-  margin-top: 0; }
 
 h2 {
   border-bottom: 2px solid #ccc;

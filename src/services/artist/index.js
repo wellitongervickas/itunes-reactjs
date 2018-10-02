@@ -5,6 +5,9 @@ const { url, search } = config.api;
 
 /**
  * @function getArtistById
+ * 
+ * This funcion will return
+ * a single artist by ID
  *
  * @param { Number } id
  * @public
@@ -21,6 +24,9 @@ export function getArtistById(id) {
 /**
  * @function getArtistCollections
  * 
+ * This function will return
+ * latest 3 collections by artist ID
+ * 
  * @param { Number } id
  * @public
  *
@@ -35,6 +41,9 @@ export function getArtistCollections(id) {
 
 /**
  * @function getArtistTracks
+ * 
+ * This function will return
+ * lastest 5 tracks by artist ID
  * 
  * @param { Number } id
  * @public
@@ -51,6 +60,9 @@ export function getArtistTracks(id) {
 /**
  * @function getTracksByCollectionId
  * 
+ * This function will return 
+ * latest 4 tracks by collection ID
+ * 
  * @param { Number } id
  * @public
  *
@@ -66,6 +78,9 @@ export function getTracksByCollectionId(id) {
 
 /**
  * @function getArtistRelated
+ * 
+ * This function will return a
+ * fake related artist
  * 
  * @param { string } term
  * @public
