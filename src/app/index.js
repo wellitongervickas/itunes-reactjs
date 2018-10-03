@@ -7,7 +7,7 @@ import Loading from '../components/loading';
 import { history } from '../store';
 
 const App = () => (
-  <Router key="dashboard" history={ history }>
+  <Router history={ history }>
     <div className="app">
       <Header/>
       <Content />
